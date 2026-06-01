@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Мир киберспорта и стримеров</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Esports Media</h1>
+                    <p>Киберспорт и стриминг</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-camera"></i> Галерея</a></li>
+                    <li><a href="contacts.html" class="active"><i class="fas fa-envelope"></i> Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="page-header">
+            <h1><i class="fas fa-envelope"></i> Контакты</h1>
+            <p class="subtitle">Свяжитесь со мной любым удобным способом</p>
+        </div>
+    </header>
+
+    <main class="contacts-container">
+        <div class="contacts-grid">
+            <div class="contacts-left">
+                <div class="info-card">
+                    <div class="card-header">
+                        <i class="fas fa-user-circle"></i>
+                        <h2>Разработчик сайта</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div><strong>ФИО:</strong> <span>Алексей Петров</span></div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div><strong>Email:</strong> <a href="mailto:a.petrov@esportsmedia.ru">a.petrov@esportsmedia.ru</a></div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-gamepad"></i>
+                            <div><strong>Специализация:</strong> <span>Киберспортивный журналист, аналитик CS2/Dota 2</span></div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div><strong>Геопозиция:</strong> <span>Москва, Россия (GMT+3)</span></div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <strong><i class="fas fa-share-alt"></i> Социальные сети:</strong>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon telegram"><i class="fab fa-telegram"></i><span>Telegram</span></a>
+                                <a href="#" class="social-icon vk"><i class="fab fa-vk"></i><span>VK</span></a>
+                                <a href="#" class="social-icon discord"><i class="fab fa-discord"></i><span>Discord</span></a>
+                                <a href="#" class="social-icon twitch"><i class="fab fa-twitch"></i><span>Twitch</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule-card">
+                    <h3><i class="fas fa-clock"></i> График работы / Доступность</h3>
+                    <div class="schedule-list">
+                        <div class="schedule-item"><span class="day">Понедельник - Пятница:</span><span class="time">10:00 - 20:00 (МСК)</span></div>
+                        <div class="schedule-item"><span class="day">Суббота:</span><span class="time">12:00 - 18:00 (МСК)</span></div>
+                        <div class="schedule-item"><span class="day">Воскресенье:</span><span class="time">Выходной</span></div>
+                        <div class="schedule-note"><i class="fas fa-headset"></i><span>В дни крупных турниров возможны изменения в графике</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts-right">
+                <div class="form-card">
+                    <div class="form-header">
+                        <i class="fas fa-paper-plane"></i>
+                        <h2>Форма обратной связи</h2>
+                        <p>Заполните форму, и я свяжусь с вами в ближайшее время</p>
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Имя <span class="required-star">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Введите ваше имя" class="form-input">
+                            <div class="error-message" id="name-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email <span class="required-star">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="example@mail.ru" class="form-input">
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Тема сообщения</label>
+                            <select id="subject" name="subject" class="form-select">
+                                <option value="">Выберите тему...</option>
+                                <option value="collaboration">Сотрудничество</option>
+                                <option value="question">Вопрос по киберспорту</option>
+                                <option value="interview">Предложение интервью</option>
+                                <option value="feedback">Обратная связь о сайте</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Сообщение <span class="required-star">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Введите ваше сообщение..." class="form-textarea"></textarea>
+                            <div class="error-message" id="message-error"></div>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="consent" class="form-checkbox">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Я согласен на обработку персональных данных</span>
+                            </label>
+                            <div class="error-message" id="consent-error"></div>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Отправить сообщение
+                        </button>
+                        
+                        <div id="form-success" class="form-success" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Сообщение успешно отправлено! Я свяжусь с вами в ближайшее время.</span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="faq-card">
+                    <h3><i class="fas fa-question-circle"></i> Часто задаваемые вопросы</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question"><i class="fas fa-chevron-right"></i> Как быстро вы отвечаете на сообщения?</div>
+                            <div class="faq-answer">Обычно я отвечаю в течение 24 часов в рабочие дни. В выходные ответ может занять до 48 часов.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question"><i class="fas fa-chevron-right"></i> Могу ли я предложить тему для статьи?</div>
+                            <div class="faq-answer">Да, конечно! Я всегда открыт для новых идей. Просто заполните форму обратной связи с описанием вашей идеи.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question"><i class="fas fa-chevron-right"></i> Сотрудничаете ли вы с другими блогерами?</div>
+                            <div class="faq-answer">Да, я открыт к сотрудничеству. Свяжитесь со мной через форму, и мы обсудим детали.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Алексей Петров. Все права защищены.</p>
+            <p class="js-status"><i class="fas fa-check-circle"></i> JavaScript загружен и работает!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
