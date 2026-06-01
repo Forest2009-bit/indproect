@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Мир киберспорта и стримеров</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Esports Media</h1>
+                    <p>Киберспорт и стриминг</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="gallery.html" class="active"><i class="fas fa-camera"></i> Галерея</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="page-header">
+            <h1><i class="fas fa-images"></i> Фотогалерея</h1>
+            <p class="subtitle">Коллекция изображений по теме: <span>Киберспорт и стриминг</span></p>
+        </div>
+    </header>
+
+    <main class="gallery-container">
+        <div class="controls-panel">
+            <div class="stats">
+                <span class="stat-item">
+                    <i class="fas fa-image"></i>
+                    Изображений: <span id="image-counter">0</span>
+                </span>
+                <span class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    Всего лайков: <span id="total-likes">0</span>
+                </span>
+            </div>
+            <div class="view-controls">
+                <button id="grid-view" class="view-btn active"><i class="fas fa-th"></i> Сетка</button>
+                <button id="list-view" class="view-btn"><i class="fas fa-list"></i> Список</button>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <h3><i class="fas fa-filter"></i> Фильтры:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="esports">Киберспорт</button>
+                <button class="filter-btn" data-filter="streaming">Стриминг</button>
+                <button class="filter-btn" data-filter="tournament">Турниры</button>
+            </div>
+        </div>
+        
+        <div class="gallery-grid" id="image-gallery">
+            <article class="image-card" data-category="esports">
+                <div class="card-image">
+                    <img src="https://images.cybersport.ru/images/og-jpg/plain/15/15066363-7203-4b4d-a44d-28278e669fc2.jpg" alt="Киберспортивный турнир CS2" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="1"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Гранд-финал CS2 Major</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 15 марта 2024</p>
+                    <p class="image-description">Финальный матч крупнейшего турнира по Counter-Strike 2. Десятки тысяч зрителей на арене.</p>
+                    <div class="image-tags"><span class="tag">CS2</span><span class="tag">турнир</span><span class="tag">киберспорт</span></div>
+                </div>
+            </article>
+            
+            <article class="image-card" data-category="streaming">
+                <div class="card-image">
+                    <img src="https://voorlichtingopscholen.nl/wp-content/uploads/2025/09/streamer-with-control-joystick-looking-camera-while-playing-game-pecuniary-2048x1365.jpg" alt="Стример за работой" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Стримерская студия</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 20 марта 2024</p>
+                    <p class="image-description">Современная студия профессионального стримера с профессиональным оборудованием.</p>
+                    <div class="image-tags"><span class="tag">стриминг</span><span class="tag">студия</span><span class="tag">оборудование</span></div>
+                </div>
+            </article>
+            
+            <article class="image-card" data-category="tournament">
+                <div class="card-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=f7cb0ef4eaee80f77c37f7a37618cbca_l-13608022-images-thumbs&n=13" alt="The International" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="3"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">The International 2024</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 5 апреля 2024</p>
+                    <p class="image-description">Главное событие года в мире Dota 2. Призовой фонд превысил 40 миллионов долларов.</p>
+                    <div class="image-tags"><span class="tag">Dota 2</span><span class="tag">The International</span><span class="tag">рекорд</span></div>
+                </div>
+            </article>
+            
+            <article class="image-card" data-category="esports">
+                <div class="card-image">
+                    <img src="https://images.steamusercontent.com/ugc/50197568414344679/6B4CC30649D3B28D66EA41557117CEB609E9EDC5/?imw=512&amp;imh=213&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true" alt="Киберспортивная команда" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="4"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Команда Team Spirit</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 12 февраля 2024</p>
+                    <p class="image-description">Российская команда после победы на The International 2023. Первая команда, выигравшая турнир из нижней сетки.</p>
+                    <div class="image-tags"><span class="tag">Team Spirit</span><span class="tag">чемпионы</span><span class="tag">Dota 2</span></div>
+                </div>
+            </article>
+            
+            <article class="image-card" data-category="tournament">
+                <div class="card-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=0f3fecac28ed9ab6fdaeeea6f602ed0c_l-10415001-images-thumbs&n=13" alt="Valorant Champions" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="5"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Valorant Champions Tour</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 28 марта 2024</p>
+                    <p class="image-description">Финальная стадия Valorant Champions Tour. Зрелищные моменты и напряжённые матчи.</p>
+                    <div class="image-tags"><span class="tag">Valorant</span><span class="tag">VCT</span><span class="tag">турнир</span></div>
+                </div>
+            </article>
+            
+            <article class="image-card" data-category="streaming">
+                <div class="card-image">
+                    <img src="https://avatars.mds.yandex.net/i?id=84cc16157368efff46f488215450bb39_l-4080717-images-thumbs&n=13" alt="Стример за игрой" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="6"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Стрим-марафон</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 10 марта 2024</p>
+                    <p class="image-description">Популярный стример во время 24-часового марафона. Сотни тысяч зрителей и миллионные донаты.</p>
+                    <div class="image-tags"><span class="tag">марафон</span><span class="tag">дотация</span><span class="tag">рекорд</span></div>
+                </div>
+            </article>
+            
+            <article class="image-card" data-category="esports">
+                <div class="card-image">
+                    <img src="https://www.dexerto.com/cdn-image/wp-content/uploads/2024/11/02/Worlds-2024-stadium.jpg" alt="League of Legends Worlds" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="7"><i class="far fa-heart"></i><span class="like-count">0</span></button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">LoL World Championship</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 18 марта 2024</p>
+                    <p class="image-description">Чемпионат мира по League of Legends — самое популярное киберспортивное событие года.</p>
+                    <div class="image-tags"><span class="tag">LoL</span><span class="tag">Worlds</span><span class="tag">стадион</span></div>
+                </div>
+            </article>
+        </div>
+        
+        <aside class="gallery-info">
+            <h3><i class="fas fa-lightbulb"></i> Интересный факт</h3>
+            <p>Финал The International 2021 по Dota 2 собрал более 2.7 миллионов одновременных зрителей, а призовой фонд турнира превысил 40 миллионов долларов!</p>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="current-year"></span> Алексей Петров. Все права защищены.</p>
+            <p class="js-status"><i class="fas fa-check-circle"></i> JavaScript загружен и работает!</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="zoom-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-img" id="modal-img" alt="Увеличенное изображение">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
